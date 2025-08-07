@@ -8,7 +8,7 @@ A modern, responsive web-based AI chatbot powered by Google's Gemini API. Tendri
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Gemini API](https://img.shields.io/badge/Gemini-API-orange)
 
-## ✨ Features
+# ✨ Features
 
 - **Real-time AI Chat**: Powered by Google's Gemini 2.0 Flash model
 - **Modern UI**: Clean, responsive design with gradient backgrounds
