@@ -122,7 +122,7 @@ function scrollToBottom() {
 
 // Your existing geminiChatAi function (unchanged)
 async function geminiChatAi(prompt) {
-  const apiKey = "AIzaSyDwWbl8oVKI24QFmX6HX31ZVIgrEiX3XUU";
+  const apiKey = "your_api_key";
   return await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
     {
