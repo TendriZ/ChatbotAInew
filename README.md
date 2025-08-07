@@ -192,6 +192,3 @@ If you encounter any issues or have questions:
 
 ---
 
-**Made with ❤️ by [Your Name]**
-
-*TendriZ AI - Your intelligent conversation partner*
