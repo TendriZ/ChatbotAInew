@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  height: 80vh;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+header {
+  background: rgb(75, 219, 216);
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.clear-btn {
+  background: linear-gradient(135deg, #ff4757, #ff3742);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(255, 71, 87, 0.3);
+  min-height: 36px;
+}
+
+.clear-btn:hover {
+  background: linear-gradient(135deg, #ff3742, #ff2f3a);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+}
+
+.clear-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(255, 71, 87, 0.3);
+}
+
+.chat-area {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #b1d4ec;
+  scroll-behavior: smooth;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+  animation: slideIn 0.3s ease-out;
+  line-height: 1.4;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message.user {
+  background: black;
+  color: white;
+  margin-left: auto;
+  text-align: right;
+}
+
+.message.bot {
+  background: white;
+  color: black;
+  border-left: 4px solid #4299e1;
+  margin-right: auto;
+}
+
+.typing-indicator {
+  background: white;
+  color: #666;
+  font-style: italic;
+  border-left: 4px solid #4299e1;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.chat-form {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+#pesan {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  min-height: 44px;
+  transition: border-color 0.3s ease;
+}
+
+#pesan:focus {
+  border-color: #4299e1;
+}
+
+#send-btn {
+  padding: 12px 24px;
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  min-height: 44px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+  background: #3182ce;
+}
+
+#send-btn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 5px;
+    align-items: stretch;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    border-radius: 10px;
+  }
+  
+  header {
+    padding: 15px;
+  }
+  
+  .header-content h1 {
+    font-size: 1.3rem;
+    text-align: left;
+    flex: 1;
+  }
+  
+  .clear-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+    flex-shrink: 0;
+  }
+  
+  .chat-area {
+    padding: 15px;
+  }
+  
+  .message {
+    font-size: 15px;
+    max-width: 85%;
+  }
+  
+  .chat-form {
+    padding: 15px;
+    gap: 8px;
+  }
+  
+  #pesan {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  
+  #send-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+    min-width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    border-radius: 5px;
+  }
+  
+  header {
+    padding: 12px;
+  }
+  
+  .header-content h1 {
+    font-size: 1.1rem;
+  }
+  
+  .clear-btn {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  
+  .message {
+    max-width: 90%;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
