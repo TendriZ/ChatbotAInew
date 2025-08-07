@@ -32,7 +32,7 @@ Open `index.html` in your browser to start chatting with TendriZ AI!
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ChatbotAInew.git
+   git clone https://github.com/TendriZ/ChatbotAInew.git
    cd ChatbotAInew
    ```
 
